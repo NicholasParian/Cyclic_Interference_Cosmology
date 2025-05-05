@@ -1,0 +1,125 @@
+\section*{3. Foundational Constructs and Definitions}
+
+This section formalizes the mathematical objects, physical quantities, and axioms underpinning the recursive cosmological framework.
+
+\subsection*{3.1 Quantum Framework}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{>{\raggedright}p{3cm}>{\raggedright}p{6.5cm}>{\raggedright\arraybackslash}p{5cm}}
+\toprule
+\textbf{Symbol} & \textbf{Definition} & \textbf{Physical Interpretation} \\
+\midrule
+$\Psi_n(\phi)$ & $\Psi_n(\phi) = \int D\phi' \, K(\phi, \phi') \Psi_{n-1}(\phi') e^{i S_{\text{ERB}}(\phi, \phi')}$ & Quantum state on boundary field configurations $\phi = (a, \varphi, E)$, where $a$ is the scale factor, $\varphi$ scalar field modes, and $E$ encodes internal entanglement variables across the ERB, representing degrees of freedom linked to mutual information \cite{hartle1983wave, ashtekar2006quantum} \\
+\addlinespace
+$K(\phi, \phi')$ & Transition kernel derived from LQG & Encodes quantum gravitational dynamics of the bounce. Incorporates spin-network geometry and entanglement filtering. Distinct from classical propagators by summing over discrete LQG structures \cite{rovelli2004quantum, bojowald2001absence} \\
+\addlinespace
+$S_{\text{ERB}}(\phi, \phi')$ & $S_{\text{ERB}} = \frac{A(\phi, \phi')}{4G\hbar} + \lambda_E I(\phi, \phi')$ & Action governing ERB-mediated transition. $A$ is the ER bridge throat area; $I$ is the mutual information between quantum configurations $\phi$ and $\phi'$ across cycles, computed via coarse-grained field and curvature correlations \cite{maldacena2013cool, almheiri2019entropy} \\
+\addlinespace
+$\rho(t)$ & $\dot{\rho}(t) = -i[\hat{H}, \rho(t)] + \int D(\tau)[\hat{O}, [\hat{O}, \rho(t - \tau)]] d\tau$ & Non-Markovian master equation describing decohering quantum states with memory. Includes feedback from earlier configurations, enabling partial coherence retention \cite{breuer2002theory} \\
+\addlinespace
+$D(\tau)$ & $D(\tau) = \gamma e^{-\tau / \tau_c} \cos(\omega_0 \tau)$ & Memory kernel with oscillatory decay. $\tau_c$: coherence timescale. $\omega_0$ reflects characteristic curvature oscillations near the bounce, possibly tied to Planck-frequency field modes \cite{grigolini1999coherence} \\
+\addlinespace
+$\hat{O}$ & $\hat{O} = \int d^3x \, a^3(x) \hat{V}(x)$ & Observable operator coupling to the environment. Volume-weighted curvature; inspired by LQG geometric operators. Acts as a probe of field structure near bounce and modulator of quantum collapse events \cite{ashtekar2004background} \\
+\bottomrule
+\end{tabular}
+\caption{Foundational quantum constructs used in recursive state evolution.}
+\end{table}
+
+\subsection*{3.2 Geometric Constructs}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{>{\raggedright}p{3cm}>{\raggedright}p{6.5cm}>{\raggedright\arraybackslash}p{5cm}}
+\toprule
+\textbf{Symbol} & \textbf{Definition} & \textbf{Constraints and Interpretation} \\
+\midrule
+$a(t)$ & Scale factor of the universe & Evolves via the LQC-modified Friedmann equation: 
+$\frac{\ddot{a}}{a} = \frac{4\pi G}{3}(\rho + 3P)\left(1 - \frac{\rho}{\rho_c}\right)$. The correction term $(1 - \rho/\rho_c)$ encodes repulsive quantum gravity effects near Planck density, resolving classical singularities \cite{ashtekar2006quantum} \\
+\addlinespace
+$\Sigma$ & Spacelike hypersurface at bounce & Satisfies fixed topological integral: 
+$\int_\Sigma h \, d^3x = V_{\text{fiducial}}$. Serves as the domain of integration for transition amplitudes. Geometry is regularized with fiducial volume \cite{rovelli2004quantum} \\
+\addlinespace
+$A_{n-1}$ & Minimal throat area of ER bridge at cycle $n-1$ & Discretized as $A = 8\pi \gamma \ell_{\text{Pl}}^2 \sum_f \sqrt{j_f(j_f+1)}$. Links geometry directly to spin-network punctures. Sets entropy and energy bounds across cycles \cite{rovelli1995discreteness} \\
+\addlinespace
+$\gamma$ & Barbero–Immirzi parameter & Dimensionless constant in LQG. Calibrated to match black hole entropy: $\gamma \approx 0.2375$. Controls spacing of area spectrum \cite{meissner2004black} \\
+\addlinespace
+$j$ & Spin-network quantum label & Half-integer spin variable $j \in \mathbb{Z}/2$ labeling quantized areas. Appears in the EPRL vertex and boundary state amplitudes. Large-$j$ limits relate to semiclassical geometry \\
+\bottomrule
+\end{tabular}
+\caption{Geometric quantities defining the boundary and bounce structure in loop quantum cosmology.}
+\end{table}
+
+\subsection*{3.3 Thermodynamic Quantities}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{>{\raggedright}p{3cm}>{\raggedright}p{6.5cm}>{\raggedright\arraybackslash}p{5cm}}
+\toprule
+\textbf{Symbol} & \textbf{Definition} & \textbf{Evolution Law and Interpretation} \\
+\midrule
+$S_n$ & Recursive entropy at cycle $n$ & 
+$S_n = \frac{A_{n-1}}{4G\hbar} - \lambda_S \log\left( |\langle \Psi_{n-1} | \Psi_n \rangle|^2 + \epsilon \right)$.
+Combines geometric entropy from the ERB throat area with a fidelity penalty reflecting decoherence across cycles \cite{bousso2002holographic} \\
+\addlinespace
+$\lambda_S$ & Coherence-to-entropy coupling constant & 
+Phenomenological parameter $0 < \lambda_S < 1$ that governs how strongly decoherence affects entropy loss. Constrained by observational consistency with CMB low-$\ell$ anomalies and gravitational wave background suppression \\
+\addlinespace
+$S_{\text{BH}}$ & Entropy lost to black holes & 
+Contributes to irrecoverable entropy due to horizon formation and evaporation. Quantified using the Bekenstein–Hawking area law, adds dissipation between cycles \cite{bekenstein1973black} \\
+\addlinespace
+$\Delta S_{\text{holo}}$ & Holographic entropy transfer & 
+Measures entropy retained across the Einstein–Rosen bridge. Calculated via mutual information and quantum extremal surface prescriptions. Appears as a correction term in recursive entropy bounds \cite{almheiri2019entropy, bousso2002holographic} \\
+\bottomrule
+\end{tabular}
+\caption{Recursive thermodynamic quantities governing entropy evolution and holographic continuity.}
+\end{table}
+
+\subsection*{3.4 Informational Constructs}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{>{\raggedright}p{3cm}>{\raggedright}p{6.5cm}>{\raggedright\arraybackslash}p{5cm}}
+\toprule
+\textbf{Term} & \textbf{Mathematical Representation} & \textbf{Role in Dynamics and Interpretation} \\
+\midrule
+\textbf{Intention} & Modeled as perturbation by a projection operator on $\Psi_n$ & 
+Represents an internal divergence trigger analogous to quantum measurement collapse. Encodes spontaneous asymmetry not imposed by external observers but emerging from the system’s internal entanglement structure. Anchors cycle-specific structure seeding \\
+\addlinespace
+\textbf{Memory} & $M_n = |\langle \Psi_{n-1} | \Psi_n \rangle|^2$ & 
+Fidelity overlap between successive quantum states; used to quantify information retained across bounces. Higher $M_n$ signals coherent recursion and better attractor convergence \cite{zurek2003decoherence} \\
+\addlinespace
+\textbf{Coherence} & $C = -\text{tr}(\rho \ln \rho)$ & 
+Von Neumann entropy of the reduced state $\rho$. Tracks quantum purity and governs whether attractor formation is possible. Decays with decoherence unless actively sustained by ERB coupling or resonance effects \cite{nielsen2002quantum} \\
+\bottomrule
+\end{tabular}
+\caption{Key informational constructs driving recursion, attractor dynamics, and state divergence.}
+\end{table}
+
+\subsection*{3.5 Recursive Geometry Axioms}
+
+\begin{enumerate}
+    \item \textbf{Temporal Symmetry} — The evolution law is bidirectional: 
+    \[
+    \Psi_n(\phi) = \int D\phi' \, K(\phi, \phi') \Psi_{n-1}(\phi') e^{i S_{\text{ERB}}(\phi, \phi')}
+    \quad \text{and} \quad
+    \Psi_{-n}(\phi) = \int D\phi' \, K(\phi, \phi') \Psi_{-n+1}(\phi') e^{i S_{\text{ERB}}(\phi, \phi')}
+    \]
+    This reflects no global time orientation. Cycles evolve forward and backward in recursion with symmetry-preserving kernels, aligning with the Wheeler-DeWitt constraint and path integral time-neutral formulations \cite{hartle1990time}.
+
+    \item \textbf{Fixed-Point Attractor} — In the deep past (\( n \to -\infty \)), recursive quantum states converge toward a conformally invariant attractor:
+    \[
+    \lim_{n \to -\infty} \Psi_n(\phi) = \Psi^*(\phi)
+    \]
+    The attractor encodes the optimal memory-preserving configuration—resilient under decoherence, entropy saturation, and recursive filtering. Its conformal invariance implies scale freedom at long memory scales and suggests equilibrium in informational and geometric flow \cite{ashtekar2011loop}.
+
+    \item \textbf{Planck-Scale Boundary} — All allowed transitions satisfy a geometric lower bound:
+    \[
+    A(\phi, \phi') \geq \ell_{\text{Pl}}^2
+    \]
+    This minimum surface area constraint ensures that the ERB throat never collapses below Planck scale, avoiding singularities and ensuring quantum gravitational stability. It is enforced via spin-network quantization: 
+    \[
+    A = 8\pi \gamma \ell_{\text{Pl}}^2 \sum_f \sqrt{j_f(j_f+1)} \geq \ell_{\text{Pl}}^2
+    \]
+    and integrated into the kernel’s suppression of high-curvature paths \cite{bojowald2001absence, rovelli1995discreteness}.
+\end{enumerate}

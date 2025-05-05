@@ -1,0 +1,102 @@
+\section*{6. Observational Signatures and Predictions}
+
+The recursive quantum cosmology model proposed herein leads to several distinct observational signatures, arising from its interference-based structure, memory-preserving kernels, and entropy-regulated decoherence dynamics. These signatures manifest across cosmic microwave background (CMB) anisotropies, the stochastic gravitational wave (GW) background, and entropy dynamics near bounce transitions.
+\subsection*{6.1 Collapse and Coherence Darwinism}
+
+The universe, like memory, is fragile. It does not always remember. Coherence is not guaranteed. When the fidelity of recursion fades, when the entanglement between cycles weakens, the wavefunction collapses --- not locally, but cosmologically~\cite{zurek_decoherence_2003,tegmark_consciousness_2000}.
+
+Decoherence is not destruction. It is transition. The density matrix \( \rho_n \), once pure, becomes mixed. Interference becomes noise. The system forgets its own path. We quantify this loss through entropy~\cite{schlosshauer_decoherence_2007}:
+
+\[
+D[\rho_n] = -\mathrm{tr}(\rho_n \ln \rho_n)
+\]
+
+The entropy does not vanish --- it shifts. What one cycle loses, another may inherit. But only if the fidelity survives~\cite{lloyd_quantum_1988}.
+
+To formalize this, we define a \textbf{coherence fitness functional}:
+
+\[
+F_n = \alpha_C \cdot \mathrm{tr}(\rho_n^2) - \alpha_S S_n + \alpha_M M_n
+\]
+
+This functional governs recursive propagation. When \( F_n \geq F_{\text{crit}} \), coherence continues --- the system remembers. When \( F_n < F_{\text{crit}} \), memory collapses and reinitialization occurs.
+
+Not all collapse is total. Some cycles retain partial structure --- memory fragments, entropic residues, incomplete inheritance. Collapse is not a cliff, but a curve~\cite{zurek_quantum_2009}.
+
+To model this, we define the \textbf{Survival Probability of Recursion}:
+
+\[
+P_{\text{survive}}(F_n) = \frac{1}{1 + e^{\kappa (F_{\text{crit}} - F_n)}}
+\]
+
+This smooth logistic function captures the probabilistic nature of recursion retention. Systems with near-threshold coherence may propagate partially, with diminished memory or altered structure.
+
+We define the target of recursive convergence as the \textbf{Convergence Field} \( \mathcal{C}^*(\phi) \): an emergent attractor shaped by recursive fidelity, coherence, and entropy balance. It is not static, but reinforced by the memory of the system itself.
+
+Each cycle contains variation. Some are closer to the attractor, others drift. The ones that retain coherence --- that resonate with the prior state --- persist. Others decay. Not because they were less ``fit,'' but because they were less coherent.
+
+This principle --- \textbf{Recursive Coherence Darwinism} --- describes the selection pressure acting on entire universes. It is not survival of the fittest, but survival of the most resonant~\cite{darwinism_cosmology_2018,tegmark_mathematical_2008}.
+
+\vspace{1em}
+\noindent
+\textit{“The universe doesn’t allow perfection.”}~\cite{hawking_brief_1988} \\
+\hfill --- Stephen Hawking
+
+\vspace{1em}
+\noindent
+\textit{“The act of forgetting is not the end of memory, but its transformation…”}~\cite{greene_fabric_2004}
+ \\
+\hfill ---  Brian Greene
+
+\vspace{2em}
+% Placeholder: Insert visual of F_n over n, bifurcation to convergence field
+% Placeholder: Insert visual metaphor of recursive attractor basin (Convergence Field)
+
+In human-scale analogs, the memory term \( M_n \) may encode not only quantum overlap but also emotional coherence --- the capacity of the system to reflect, respond, and retain. In this sense, coherence is both mathematical and meaningful~\cite{penrose_emperors_1994,tononi_consciousness_2004}.
+
+Recursion does not end in collapse. It ends in re-formation. The loss of coherence does not erase the universe --- it seeds its next becoming.
+
+\noindent\textit{Note:} For a complementary geometric interpretation of relativistic coherence collapse, see Appendix D.
+
+
+\subsection*{6.2 CMB Power Suppression at Large Angular Scales}
+
+Quantum interference with prior-cycle memory states, encoded in the initial condition kernel \( K(\phi, \phi') \), introduces a phase coherence constraint on long-wavelength cosmological perturbations. This generically leads to suppression of power at low multipole moments (\( \ell < 30 \)). The observed suppression in the Planck satellite data is consistent with this framework.
+
+The transition kernel contributes an effective Gaussian cutoff to curvature perturbations:
+\[
+P(k) \rightarrow P(k) \cdot \exp\left[-\frac{(\Delta \phi - \phi_*)^2}{2\sigma_\phi^2}\right]
+\]
+where \( \phi_* \) is the most probable overlap configuration from prior cycles. This modifies the Sachs-Wolfe plateau in the angular power spectrum \( C_\ell \).
+
+\subsection*{6.3 Gravitational Wave Spectrum Modulation}
+
+Compactified geometry across bounces induces modulated expansion rates, generating characteristic features in the stochastic GW background. If the bounce dynamics are quasi-periodic due to Calabi-Yau moduli stabilization, then resonance-like oscillations emerge in \( \Omega_{\text{GW}}(f) \).
+
+Expected frequencies:
+\[
+f_j \sim \frac{j}{L_c}, \quad j \in \mathbb{Z}^+
+\]
+where \( L_c \) is the compactification scale. These modulations appear as dips or harmonics superimposed on a scale-invariant background, potentially observable by LISA or future interferometers.
+
+\subsection*{6.4 Entropy Conservation Across Cosmological Bounces}
+
+The non-Markovian memory kernel \( D(\tau) \), when integrated over a full cycle, enforces a bounded entropy flux. The recursive framework ensures that the entanglement entropy \( S(t) = -\mathrm{tr}(\rho \log \rho) \) asymptotically saturates, reflecting a steady-state attractor across successive bounces.
+
+This implies a quasi-conservation law:
+\[
+S_{n+1} \lesssim S_n + \delta S_{\text{Hawking}} - \delta S_{\text{decohere}}
+\]
+where memory retention and Hawking-like radiation contribute opposing entropy flows. Observable consequence: retention of low-entropy structure in initial conditions after bounce, testable via anomalies in early-universe correlations.
+
+\subsection*{6.5 Summary}
+
+These predictions distinguish the proposed model from standard inflationary cosmology. In particular:
+\begin{itemize}
+    \item CMB suppression at low \( \ell \) arises naturally without fine-tuned inflationary initial conditions.
+    \item GW spectral modulation provides a signature of cyclic geometry and compactification.
+    \item Entropy quasi-conservation implies memory persistence, providing a falsifiable constraint on inter-bounce dynamics.
+\end{itemize}
+
+Future observational campaigns—particularly in low-\( \ell \) polarization (e.g., LiteBIRD) and stochastic GW detection—can test these signatures.
+

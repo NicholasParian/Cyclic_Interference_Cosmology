@@ -1,0 +1,64 @@
+\section*{Appendix B: Single-Cycle Decoherence and Memory Kernel Dynamics}
+
+\subsection*{B.1 Overview}
+
+We model the intra-cycle decoherence dynamics of a cosmological system using a density matrix formalism \( \rho(t) \), treating it as the fundamental object. Evolution is governed by a non-Markovian master equation incorporating memory effects. Prior-cycle information is injected via an initial condition constructed through a transition kernel \( K(\phi, \phi') \), encoding recursive quantum interference. Entanglement entropy modulates the decoherence kernel dynamically.
+
+\subsection*{B.2 Initial State Construction via Recursive Kernel}
+
+We define the starting state of the current cycle as a projected interference from the previous cycle:
+\[
+\rho_n(\phi) = \int K(\phi, \phi') \, \rho_{n-1}(\phi') \, d\phi'
+\]
+where \( K(\phi, \phi') \) approximates the spinfoam boundary amplitude derived from loop quantum geometry (see Appendix C):
+\[
+K(\phi, \phi') \sim \sum_{j_f} \prod_f (2j_f+1) e^{-j_f(j_f+1)/2j_0^2} \mathcal{F}(a,a')
+\]
+Here, \( \mathcal{F}(a,a') = \exp[-(\Delta\phi-\phi_*)^2/2\sigma_\phi^2] \) filters coherent configurations, while \( j_f \) labels SU(2) spins encoding Planck-scale discreteness~\cite{rovelli2004quantum,engle2008lqg}. The kernel mediates memory flux across the bounce, with possible Higgs field or ER bridge support~\cite{maldacena2013cool}.
+
+\subsection*{B.3 Decoherence Equation with Memory Feedback}
+
+The system evolves according to:
+\[
+\dot{\rho}(t) = -i[H, \rho(t)] + \int_0^t D(\tau) \, [\hat{O}, [\hat{O}, \rho(t - \tau)]] \, d\tau
+\]
+where:
+\begin{itemize}
+    \item \( H \) is the effective Hamiltonian incorporating LQC corrections~\cite{ashtekar2006quantum}.
+    \item \( \hat{O} = \text{tr}(\rho^2) \, \hat{R}_{\text{eff}}(x) \) is the purity-weighted curvature operator.
+    \item \( \hat{R}_{\text{eff}} \) captures scalar curvature fluctuations modulated by entanglement.
+\end{itemize}
+
+\subsection*{B.4 Entropy-Modulated Memory Kernel}
+
+The decoherence kernel responds dynamically to entanglement entropy \( S = -\mathrm{tr}(\rho \log \rho) \):
+\[
+D(\tau) = \gamma(S) \, e^{-\tau/\tau_c(S)} \cos(\omega_0(S) \, \tau)
+\]
+with scaling laws:
+\begin{align*}
+    \tau_c(S) &\sim S^{-1} \quad \text{(entanglement-driven coherence time)} \\
+    \omega_0(S) &= \omega_{\text{LQG}} \sqrt{1 - \left(S/S_{\text{max}}\right)} \quad \text{(LQG spectral gap)} \\
+    \gamma(S) &\propto e^{-\beta S} \quad \text{(thermodynamic damping)}
+\end{align*}
+This form ensures: (1) Markovian limit when \( S \to 0 \), (2) complete decoherence at \( S = S_{\text{max}} \), and (3) spectral signatures tied to loop quantum geometry~\cite{breuer2002theory}.
+
+\subsection*{B.5 Numerical Implementation and Observables}
+
+Simulation priorities for cycle \( n \):
+\begin{itemize}
+    \item \textbf{Entropy growth}: Track \( S(t) = -\mathrm{tr}(\rho \log \rho) \) under curvature coupling.
+    \item \textbf{Fidelity decay}: Measure intracycle memory retention using the trace inner product:
+    \[
+    \mathcal{F}(t) = \mathrm{tr}[\rho(0)\rho(t)]
+    \]
+    This fidelity function serves as a proxy for recursive memory strength; high \( \mathcal{F}(t) \) indicates successful coherence propagation across cycle time \( t \). \textit{Note: This intracycle fidelity \( \mathcal{F}(t) \) should not be confused with the intercycle fitness functional \( \mathcal{F}_n \) defined in Appendix~C.}
+    \item \textbf{Kernel calibration}: Fit \( \gamma(S) \), \( \tau_c(S) \) to CMB suppression at \( \ell < 30 \)~\cite{planck2019inflation}.
+\end{itemize}
+
+Initial condition from recursive interference:
+\[
+\rho(0) = \int K(\phi, \phi') \, \rho_{n-1}(\phi') \, d\phi'
+\]
+
+Future work will generalize to multi-cycle attractor dynamics (§10) and ER bridge-mediated entanglement transfer~\cite{almheiri2019entropy}.
